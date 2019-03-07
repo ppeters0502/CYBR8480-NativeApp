@@ -14,7 +14,7 @@ public class CreateUserActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_create_user);
     }
-    static boolean male = true;
+    static boolean male = false;
     public void onClick(View view){
 
         EditText input = (EditText) findViewById(R.id.username);
