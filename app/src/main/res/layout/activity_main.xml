@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CreateUserActivity">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/myColor">
 
     <TextView
-        android:id="@+id/userlabel"
+        android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -16,26 +17,23 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/editText1"
-        android:layout_width="wrap_content"
+        android:id="@+id/inputValue"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/userlabel"
-        android:layout_below="@+id/userlabel"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@+id/textView"
         android:ems="10"
-        android:inputType="textPersonName"
-        android:text=""
-        android:textSize="36sp"
-        />
+        android:inputType="numberSigned|numberDecimal" />
     <RadioGroup
         android:id="@+id/radioGroup1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1">
+        android:layout_alignLeft="@+id/inputValue"
+        android:layout_below="@+id/inputValue">
         <RadioButton
             android:id="@+id/radio0"
-            android:layout_width="16dp"
-            android:layout_height="16dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:checked="true"
             android:text="@string/fahrenheit"
             />
@@ -47,14 +45,14 @@
             />
     </RadioGroup>
     <Button
-        android:id="@+id/createUserButton"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
-        android:layout_margin="16dp"
-        android:layout_below="@+id/gender"
+        android:layout_marginTop="22dp"
+        android:layout_below="@+id/radioGroup1"
         android:text="Create"
         android:onClick="onClick"
         />
 
-</RelativeLayout>
+</LinearLayout>
